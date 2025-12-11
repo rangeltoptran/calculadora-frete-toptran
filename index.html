@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Frete - TopTran</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h2>Calculadora de Frete - TopTran</h2>
+
+    <table class="frete-table">
+      <tr>
+        <th>Proposta</th>
+        <th>Preço do Diesel (R$)</th>
+        <th>Km/l</th>
+        <th>Fator</th>
+        <th>Valor do Km Rodado</th>
+        <th>% Diesel no Frete</th>
+        <th>Km Rodados</th>
+        <th>Custo Inicial (R$)</th>
+        <th>Pedágio (R$)</th>
+        <th>AET (R$)</th>
+        <th>Escolta (R$)</th>
+        <th>Outros Custos (R$)</th>
+        <th>Custo Total (R$)</th>
+        <th>Impostos (%)</th>
+        <th>Custo Final (R$)</th>
+      </tr>
+      <tr>
+        <td><input type="number" id="proposta" placeholder="Número da proposta"></td>
+        <td><input type="number" id="diesel" placeholder="Preço do Diesel (R$)"></td>
+        <td><select id="kmL">
+          <option value="1">1</option>
+          <option value="1.5">1.5</option>
+          <option value="2">2</option>
+          <option value="2.5">2.5</option>
+          <option value="3">3</option>
+          <option value="3.5">3.5</option>
+          <option value="4">4</option>
+        </select></td>
+        <td><input type="number" id="fator" placeholder="Fator"></td>
+        <td id="valorKmRodado"></td>
+        <td id="percentualDiesel"></td>
+        <td><input type="number" id="kmRodados" placeholder="Km Rodados"></td>
+        <td id="custoInicial"></td>
+        <td><input type="number" id="pedagio" placeholder="Pedágio (R$)"></td>
+        <td><input type="number" id="aet" placeholder="AET (R$)"></td>
+        <td id="escolta"></td>
+        <td><input type="number" id="outrosCustos" placeholder="Outros Custos (R$)"></td>
+        <td id="custoTotal"></td>
+        <td><input type="number" id="impostos" placeholder="Impostos (%)"></td>
+        <td id="custoFinal"></td>
+      </tr>
+    </table>
+
+    <button class="calculate-btn" onclick="calcularFrete()">Calcular Frete</button>
+
+    <p class="result">Resultado: <span id="resultadoFinal">R$ 0,00</span></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
